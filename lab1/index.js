@@ -31,3 +31,30 @@ function markdownToHTML(markdownText) {
 
     return markdownText;
 }
+
+// Функція для зчитування файлу та обробки його змісту
+function processFile(filePath, outputPath) {
+    // Зчитування вмісту файлу
+    fs.readFile(filePath, 'utf8', (err, data) => {
+        if (err) {
+            console.error('Помилка зчитування файлу:', err);
+            process.exit(1); // Завершення з помилкою
+        }
+
+        // Перетворення Markdown в HTML
+        const htmlContent = markdownToHTML(data);
+
+        // Виведення HTML в консоль або запис у вихідний файл
+        if (outputPath) {
+            fs.writeFile(outputPath, htmlContent, 'utf8', (err) => {
+                if (err) {
+                    console.error('Помилка запису у вихідний файл:', err);
+                    process.exit(1); // Завершення з помилкою
+                }
+                console.log(`HTML успішно записано у файл: ${outputPath}`);
+            });
+        } else {
+            console.log(htmlContent);
+        }
+    });
+}
