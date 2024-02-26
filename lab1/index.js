@@ -58,3 +58,17 @@ function processFile(filePath, outputPath) {
         }
     });
 }
+
+// Отримання аргументів командного рядка
+const args = process.argv.slice(2);
+const inputFile = args[0];
+const outputFile = args[1];
+
+// Перевірка, чи був переданий шлях до вхідного файлу
+if (!inputFile) {
+    console.error('Вкажіть шлях до вхідного файлу.');
+    process.exit(1); // Завершення з помилкою
+}
+
+// Обробка вхідного файлу
+processFile(inputFile, outputFile);
