@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="6793fd9d-33ee-4b01-85b1-612867e6c2a4" name="Changes" comment="Added README file with instructions and description">
+      <change beforePath="$PROJECT_DIR$/lab1/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/lab1/index.js" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="main" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 5
+}</component>
+  <component name="ProjectId" id="2ctxne66e7ZDTaMI11Rgi6wTRhc" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Node.js.index.js.executor": "Run",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "lab2",
+    "last_opened_file_path": "D:/WebStormProjects",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "org.jetbrains.plugins.github.ui.GithubSettingsConfigurable",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="6793fd9d-33ee-4b01-85b1-612867e6c2a4" name="Changes" comment="" />
+      <created>1708944844008</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1708944844008</updated>
+      <workItem from="1708944845141" duration="5599000" />
+      <workItem from="1710772684295" duration="2415000" />
+    </task>
+    <task id="LOCAL-00001" summary="Add Markdown to HTML conversion function">
+      <option name="closed" value="true" />
+      <created>1708946852479</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1708946852480</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Added comments">
+      <option name="closed" value="true" />
+      <created>1708947138493</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1708947138493</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Added comments">
+      <option name="closed" value="true" />
+      <created>1708948545221</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1708948545221</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Add file processing logic (processFile function)">
+      <option name="closed" value="true" />
+      <created>1708948792213</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1708948792213</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Add command line arguments handling">
+      <option name="closed" value="true" />
+      <created>1708948887154</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1708948887154</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Added README file with instructions and description">
+      <option name="closed" value="true" />
+      <created>1708949711635</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1708949711635</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Add Markdown to HTML conversion function" />
+    <MESSAGE value="Added comments" />
+    <MESSAGE value="Add file processing logic (processFile function)" />
+    <MESSAGE value="Add command line arguments handling" />
+    <MESSAGE value="Added README file with instructions and description" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added README file with instructions and description" />
+  </component>
+</project>
