@@ -10,24 +10,24 @@ function markdownToHTML(markdownText, format = 'ansi') {
             .replace(/'/g, '&#039;');
     }
 
-    // Обгортка для жирного тексту
-    const boldRegex = /\*\*(.*?)\*\*/g;
-    markdownText = markdownText.replace(boldRegex, format === 'ansi' ? '\x1b[1m$1\x1b[22m' : '<strong>$1</strong>');
-
-    // Обгортка для курсивного тексту
-    const italicRegex = /_(.*?)_/g;
-    markdownText = markdownText.replace(italicRegex, format === 'ansi' ? '\x1b[3m$1\x1b[23m' : '<em>$1</em>');
-
-    // Обгортка для моноширинного тексту
-    const monospacedRegex = /`([^`]+)`/g;
-    markdownText = markdownText.replace(monospacedRegex, format === 'ansi' ? '\x1b[7m$1\x1b[27m' : '<code>$1</code>');
-
     // Обгортка для блоків передформатованого тексту
-    const preformattedRegex = /```([^`]+)```/g;
-    markdownText = markdownText.replace(preformattedRegex, format === 'ansi' ? '\x1b[7m$1\x1b[27m' : '<pre>$1</pre>');
+    const preformattedRegex = /```([\s\S]+?)```/g;
+    markdownText = markdownText.replace(preformattedRegex, format === 'ansi' ? '<pre>$1</pre>' : '<pre>$1</pre>');
 
     // Заміна символу нового рядка на тег <br> для збереження переносу рядків
     markdownText = markdownText.replace(/\n/g, '<br>');
+
+    // Обгортка для жирного тексту
+    const boldRegex = /\*\*(.*?)\*\*/g;
+    markdownText = markdownText.replace(boldRegex, format === 'ansi' ? '<strong>$1</strong>' : '<strong>$1</strong>');
+
+    // Обгортка для курсивного тексту
+    const italicRegex = /_(.*?)_/g;
+    markdownText = markdownText.replace(italicRegex, format === 'ansi' ? '<em>$1</em>' : '<em>$1</em>');
+
+    // Обгортка для моноширинного тексту
+    const monospacedRegex = /`([^`]+)`/g;
+    markdownText = markdownText.replace(monospacedRegex, format === 'ansi' ? '<code>$1</code>' : '<code>$1</code>');
 
     return markdownText;
 }
@@ -63,14 +63,25 @@ function processFile(filePath, outputPath, format) {
 const args = process.argv.slice(2);
 const inputFile = args[0];
 const outputFile = args[1];
+let format = 'ansi'; // Значення за замовчуванням
+
+// Перевірка прапорця --format у командному рядку
 const formatIndex = args.indexOf('--format');
-const format = formatIndex !== -1 && args[formatIndex + 1] ? args[formatIndex + 1].toLowerCase() : 'ansi';
+if (formatIndex !== -1 && args[formatIndex + 1]) {
+    format = args[formatIndex + 1].toLowerCase();
+    if (!['ansi', 'html'].includes(format)) {
+        console.error('Недопустиме значення для формату. Використовуйте "ansi" або "html".');
+        process.exit(1); // Завершення з помилкою
+    }
+}
 
 // Перевірка, чи був переданий шлях до вхідного файлу
-if (!inputFile) {
-    console.error('Вкажіть шлях до вхідного файлу.');
-    process.exit(1); // Завершення з помилкою
-}
+// if (!inputFile) {
+//     console.error('Вкажіть шлях до вхідного файлу.');
+//     process.exit(1); // Завершення з помилкою
+// }
 
 // Обробка вхідного файлу з вибором формату виводу
 processFile(inputFile, outputFile, format);
+
+module.exports = { markdownToHTML, processFile };
