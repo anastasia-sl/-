@@ -44,10 +44,18 @@ describe('Markdown Converter', () => {
             processFile(filePath, outputPath, 'html');
 
             setTimeout(() => {
-                // Check if the file is created and contains the expected HTML content
-                // You can use fs.readFileSync to read the file content and perform checks
+                // Перевірка, чи був створений вихідний файл
+                expect(fs.existsSync(outputPath)).toBe(true);
+
+                // Зчитування вмісту створеного файлу
+                const fileContent = fs.readFileSync(outputPath, 'utf8');
+
+                // Перевірка, чи містить файл очікуваний HTML контент
+                const expectedContent = '<pre>Preformatted Text</pre>';
+                expect(fileContent).toContain(expectedContent);
+
                 done();
-            }, 1000); // Allow time for file writing
+            }, 1000);
         });
     });
 });

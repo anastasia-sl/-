@@ -80,7 +80,6 @@ if (formatIndex !== -1 && args[formatIndex + 1]) {
 //     console.error('Вкажіть шлях до вхідного файлу.');
 //     process.exit(1); // Завершення з помилкою
 // }
-
 // Обробка вхідного файлу з вибором формату виводу
 processFile(inputFile, outputFile, format);
 
